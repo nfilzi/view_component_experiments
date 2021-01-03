@@ -1,0 +1,21 @@
+<% if false %>
+  <%= render(Example::Component.new(title: @the_title)) do |component| %>
+    <% component.with(:body) do %>
+      <p>Hello Jane,</p>
+    <% end %>
+
+    <% component.with(:footer) do %>
+      <p>Have a great day!</p>
+    <% end %>
+  <% end %>
+<% end %>
+
+
+<%= render(
+  Clip::Component.new(
+    movie_title:            "LOTR III",
+    movie_director:         "Peter Jackson",
+    movie_title_guessed:    true,
+    movie_director_guessed: false
+  )
+) %>

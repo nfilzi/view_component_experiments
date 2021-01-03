@@ -1,0 +1,17 @@
+.movie_title_guessed h3 {
+  color: green;
+}
+
+.movie_title_guessed h3:after {
+  content:     "🎉";
+  margin-left: 1em;
+}
+
+.movie_director_guessed h4 {
+  color: green;
+}
+
+.movie_director_guessed  h4:after {
+  content:     "🎉";
+  margin-left: 1em;
+}
