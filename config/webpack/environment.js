@@ -1,7 +1,7 @@
 const { environment } = require('@rails/webpacker')
 
-const cssRule   = environment.loaders.get('css')
-const cssLoader = cssRule.use.find(loader => loader.loader === 'css-loader')
+const sassLoader = environment.loaders.get('sass')
+const cssLoader  = sassLoader.use.find(loader => loader.loader === 'css-loader')
 
 const path = require('path')
 

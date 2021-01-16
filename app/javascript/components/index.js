@@ -6,6 +6,6 @@ function importAll(r) {
 
 importAll(require.context("../../components", true, /component.js$/))
 
-const componentsCSScontext = require.context("../../components", true, /component.css$/)
+const componentsCSScontext = require.context("../../components", true, /component.scss$/)
 importAll(componentsCSScontext)
 
