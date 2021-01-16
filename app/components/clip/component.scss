@@ -1,5 +1,10 @@
 @import "config/colors";
 
+.container {
+  background-color: white;
+  background-image: url("images/lotr.jpg")
+}
+
 .movie_title_guessed h3 {
   color: $primary-color;
 }

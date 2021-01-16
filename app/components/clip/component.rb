@@ -12,8 +12,9 @@ class Clip::Component < ViewComponent::Base
 
   def setup_classes
     {
+      container:              true,
       movie_title_guessed:    @movie_title_guessed,
-      movie_director_guessed: @movie_director_guessed,
+      movie_director_guessed: @movie_director_guessed
     }
   end
 end
