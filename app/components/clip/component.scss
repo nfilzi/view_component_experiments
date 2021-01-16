@@ -1,5 +1,7 @@
+@import "config/colors";
+
 .movie_title_guessed h3 {
-  color: green;
+  color: $primary-color;
 }
 
 .movie_title_guessed h3:after {

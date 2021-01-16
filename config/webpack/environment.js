@@ -1,9 +1,14 @@
 const { environment } = require('@rails/webpacker')
-
-const sassLoader = environment.loaders.get('sass')
-const cssLoader  = sassLoader.use.find(loader => loader.loader === 'css-loader')
-
 const path = require('path')
+
+const sassRule   = environment.loaders.get('sass')
+const sassLoader = sassRule.use.find(loader => loader.loader === 'sass-loader')
+
+sassLoader.options = Object.assign(sassLoader.options, {
+  includePaths: [path.resolve(__dirname, "../../app/assets/stylesheets")]
+})
+
+const cssLoader  = sassRule.use.find(loader => loader.loader === 'css-loader')
 
 cssLoader.options = Object.assign(cssLoader.options, {
   modules: {
