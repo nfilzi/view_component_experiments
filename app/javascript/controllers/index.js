@@ -9,7 +9,8 @@ const application = Application.start()
 const context = require.context("controllers", true, /_controller\.js$/)
 
 // Using ViewComponent with sidecar folders structure for stimulus controllers
-const contextComponents = require.context("../../components", true, /_controller.js$/)
+const contextComponents = require.context("../../components", true, /controller.js$/)
+console.log(definitionsFromContext(contextComponents))
 
 application.load(
   definitionsFromContext(context).concat(
